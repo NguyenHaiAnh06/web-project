@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đăng ký tài khoản</title>
+
+    <!-- DÙNG CHUNG CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+     <!-- CHAT BOX ICON -->
+    <div class="chatbox">
+      <a href="chat_box.html" class="chatbox-link">
+        <span class="chatbox-icon">
+          <span class="chatbox-icon-symbol">🗨️</span>
+          <span class="chatbox-badge">Chat Box</span>
+        </span>
+      </a>
+      <a href="vest.html">VEST</a>
+      <a href="ca_vat.html">CÀ VẠT</a>
+      <a href="ao_so_mi.html">ÁO SƠ MI</a>
+      <a href="gio_hang.html">🛒</a>
+      <a href="admin.html">👤</a>
+    <div class="auth-container">
+      <div class="auth-box">
+        <form class="auth-form" method="post">
+          <h2>ĐĂNG KÝ</h2>
+
+          <div class="form-group">
+            <input
+              type="text"
+              name="fullname"
+              placeholder="Họ và tên"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email" required />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              name="username"
+              placeholder="Tên đăng nhập"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="password"
+              name="password"
+              placeholder="Mật khẩu"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="password"
+              name="confirm_password"
+              placeholder="Nhập lại mật khẩu"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn">Đăng ký</button>
+
+          <p class="link-switch">
+            Đã có tài khoản?
+            <a href="dang_nhap.html">Đăng nhập</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
