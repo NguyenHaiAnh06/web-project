@@ -3,60 +3,175 @@
   <head>
     <meta charset="UTF-8" />
     <title>Chat với shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/chat.css" />
+    <link rel="stylesheet" href="./css/giao_diẹn.css">
   </head>
 
   <body>
-    <a href="giao_dien.html">HOME</a>
+     <div class="header">
+      <a href="chat.html" class="chatbox-link"></a>
+      <a href="giao_dien.html">TRANG CHỦ</a>
+      <a href="vest.html">VEST</a>
+      <a href="quan.html">QUẦN</a>
+      <a href="ca_vat.html">CÀ VẠT</a>
+      <a href="ao_so_mi.html">ÁO SƠ MI</a>
+      <a href="dang_nhap.html">ĐĂNG NHẬP</a>
+      <a href="dang_ky.html">ĐĂNG KÝ</a>
+      <a href="gio_hang.html">🛒 Giỏ Hàng</a>
+      <a href="adimin.html">👤Cài Đặt</a>
+    </div>
     <div class="chat">
       <div class="chat-header">
         <span class="chat-title">Hỗ trợ khách hàng</span>
       </div>
 
-      <div class="chat-body">
+      <div class="chat-body" id="chatBody">
         <div class="chat-message chat-message-shop">
-          <span class="chat-text">Shop Quý Ông chào quý khách👋.</span>
-        </div>
-
-        <div class="chat-message chat-message-user">
-          <span class="chat-text">Tôi cần tư vấn sản phẩm.</span>
+          <span class="chat-text">Shop Quý Ông chào quý khách 👋</span>
         </div>
       </div>
 
-      <div class="chat-message chat-message-shop">
-        <span class="chat-text">Tôi cần hủy đơn hàng.</span>
-      </div>
-
-      <div class="chat-message chat-message-shop">
-        <span class="chat-text">Tôi gặp sự cố.</span>
-      </div>
-
-      <div class="chat-message chat-message-shop">
-        <span class="chat-text"
-          >Tôi cần được cô giáo:Lê Trang cho 10 điểm.</span
-        >
-      </div>
-
-      <form
-        class="chat-input"
-        action="backend thêm để liên hệ nhá"
-        method="post"
-      >
+      <form class="chat-input" id="chatForm">
         <input
           type="text"
-          name="message"
+          id="chatInput"
           class="chat-input-text"
           placeholder="Nhập câu hỏi..."
+          autocomplete="off"
         />
-
         <button type="submit" class="chat-input-send">Gửi</button>
-        <!-- Nút Zalo / Chat -->
-        <div class="chat-float">
-          <img
-            src="https://static-omni.worldfone.cloud/uploads/omni_chat/2024/04/12/images/10079_1712912724woni.jpg"
-            alt="Zalo Chat"
-          />
-        </div>
       </form>
-    </div>
+
+    <script>
+  const form = document.getElementById("chatForm");
+  const input = document.getElementById("chatInput");
+  const chatBody = document.getElementById("chatBody");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const message = input.value.trim();
+    if (message === "") return;
+
+    addMessage(message, "user");
+    input.value = "";
+
+    setTimeout(() => {
+      botReply(message.toLowerCase());
+    }, 600);
+  });
+
+  function addMessage(text, sender) {
+    const msg = document.createElement("div");
+    msg.className = `chat-message chat-message-${sender}`;
+
+    const span = document.createElement("span");
+    span.className = "chat-text";
+    span.textContent = text;
+
+    msg.appendChild(span);
+    chatBody.appendChild(msg);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+
+  function botReply(text) {
+    let reply =
+      "Shop chưa hiểu rõ nhu cầu của bạn 🤔. Bạn có thể nói rõ hơn không ạ?";
+
+    /* ====== CHÀO HỎI ====== */
+    if (
+      text.includes("chào") ||
+      text.includes("hello") ||
+      text.includes("hi")
+    ) {
+      reply =
+        "Shop Quý Ông xin chào 👋. Shop có thể hỗ trợ bạn về vest, sơ mi hay phụ kiện ạ?";
+    }
+
+    /* ====== TƯ VẤN CHUNG ====== */
+    else if (text.includes("tư vấn")) {
+      reply =
+        "Shop rất sẵn lòng tư vấn 👔. Bạn cần mặc đi tiệc, đi làm hay cưới hỏi ạ?";
+    }
+
+    /* ====== VEST ====== */
+    else if (text.includes("vest")) {
+      reply =
+        "Vest bên shop có nhiều form (classic, slimfit) và màu sắc 🎩. Bạn cho shop biết chiều cao, cân nặng để tư vấn chuẩn size nhé.";
+    }
+
+    /* ====== SƠ MI ====== */
+    else if (text.includes("sơ mi") || text.includes("somy")) {
+      reply =
+        "Sơ mi shop có loại trơn, kẻ, trắng – rất dễ phối vest 👔. Bạn thích form ôm hay form thoải mái ạ?";
+    }
+
+    /* ====== QUẦN ====== */
+    else if (text.includes("quần")) {
+      reply =
+        "Quần âu shop dùng chất vải đứng form, dễ phối vest 👖. Bạn cần quần đi làm hay đi tiệc ạ?";
+    }
+
+    /* ====== CÀ VẠT ====== */
+    else if (text.includes("cà vạt") || text.includes("caravat")) {
+      reply =
+        "Cà vạt bên shop có nhiều mẫu lịch lãm 🎀. Bạn thích màu trơn hay họa tiết ạ?";
+    }
+
+    /* ====== SIZE ====== */
+    else if (text.includes("size") || text.includes("kích cỡ")) {
+      reply =
+        "Shop hỗ trợ chọn size rất kỹ 👍. Bạn cho shop xin chiều cao + cân nặng nhé.";
+    }
+
+    /* ====== GIÁ ====== */
+    else if (text.includes("giá") || text.includes("bao nhiêu")) {
+      reply =
+        "Giá sản phẩm bên shop rất hợp lý 💰. Bạn đang quan tâm sản phẩm nào để shop báo giá chi tiết ạ?";
+    }
+
+    /* ====== GIAO HÀNG ====== */
+    else if (
+      text.includes("ship") ||
+      text.includes("giao hàng") ||
+      text.includes("vận chuyển")
+    ) {
+      reply =
+        "Shop giao hàng toàn quốc 🚚, nhận hàng kiểm tra rồi mới thanh toán nhé.";
+    }
+
+    /* ====== ĐỔI / TRẢ ====== */
+    else if (
+      text.includes("đổi") ||
+      text.includes("trả") ||
+      text.includes("hoàn")
+    ) {
+      reply =
+        "Shop hỗ trợ đổi size trong 3–5 ngày 👍. Miễn là sản phẩm còn nguyên tem mác ạ.";
+    }
+
+    /* ====== HỦY ĐƠN ====== */
+    else if (text.includes("hủy")) {
+      reply =
+        "Để hủy đơn, bạn vui lòng cung cấp mã đơn hoặc liên hệ hotline 0348008387 để shop hỗ trợ nhanh nhất.";
+    }
+
+    /* ====== SỰ CỐ ====== */
+    else if (text.includes("sự cố") || text.includes("lỗi")) {
+      reply =
+        "Shop xin lỗi vì sự bất tiện 😥. Bạn mô tả rõ tình huống để shop xử lý ngay cho bạn nhé.";
+    }
+
+    /* ====== VUI VẺ / GIẢI TRÍ ====== */
+    else if (text.includes("10 điểm") || text.includes("giáo")) {
+      reply =
+        "Shop không chấm điểm được 😄 nhưng chúc bạn học thật tốt và mặc thật đẹp nhé!";
+    }
+
+    addMessage(reply, "shop");
+  }
+</script>
+
   </body>
 </html>

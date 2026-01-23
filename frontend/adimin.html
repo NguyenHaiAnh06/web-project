@@ -2,17 +2,22 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <title>Admin</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>ADMIN | SHOP QUÝ ÔNG</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS dùng chung phong cách -->
+    <link rel="stylesheet" href="./css/admin.css" />
   </head>
 
   <body class="admin-body">
-    <!-- HEADER -->
+    <!-- ================= HEADER ================= -->
     <header class="admin-header">
-      <h1 class="admin-title">ADMIN</h1>
+      <h1 class="admin-title">ADMIN DASHBOARD</h1>
     </header>
-     <div class="chatbox">
+
+    <!-- ================= CHAT BOX ================= -->
+    <div class="chatbox">
       <a href="chat_box.html" class="chatbox-link">
         <span class="chatbox-icon">
           <span class="chatbox-icon-symbol">🗨️</span>
@@ -21,18 +26,23 @@
       </a>
     </div>
 
-    <div class="admin-container">
-      <!-- SIDEBAR -->
+    <!-- ================= MAIN LAYOUT ================= -->
+    <div class="admin-layout">
+      <!-- ===== SIDEBAR ===== -->
       <aside class="admin-sidebar">
-        <ul class="admin-menu">
-        <a href="giao_dien.html">HOME</a>
-          <a href="dang_nhap.html">ĐĂNG NHẬP</a>
-          <a href="dang_ky.html">ĐĂNG KÝ</a>
-        </ul>
+        <nav class="admin-menu">
+          <a href="giao_dien.html" class="admin-menu-link">Trang chủ</a>
+          <a href="dang_nhap.html" class="admin-menu-link">Đăng nhập</a>
+          <a href="dang_ky.html" class="admin-menu-link">Đăng ký</a>
+        </nav>
 
-        <a href="index.html" class="admin-logout">Đăng xuất</a>
+        <a href="giao_dien.html" class="admin-logout">Đăng xuất</a>
       </aside>
-        </section>
+
+      <!-- ===== CONTENT (để sau này mở rộng) ===== -->
+      <main class="admin-content">
+        <h2>Chào mừng Admin</h2>
+        <p>Chọn chức năng ở menu bên trái để quản lý hệ thống.</p>
       </main>
     </div>
   </body>

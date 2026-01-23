@@ -3,48 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <title>Giỏ hàng</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/gio_hang.css" />
+    <link rel="stylesheet" href="./css/giao_diẹn.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
   <body>
-     <!-- CHAT BOX ICON -->
-    <div class="chatbox">
-      <a href="chat_box.html" class="chatbox-link">
-        <span class="chatbox-icon">
-          <span class="chatbox-icon-symbol">🗨️</span>
-          <span class="chatbox-badge">Chat Box</span>
-        </span>
+    <!-- CHAT BOX -->
+    <div class="chat-wrapper">
+      <a href="https://zalo.me/0123456789" target="_blank" class="zalo-icon">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg"
+        />
       </a>
-    <header class="header">
-      <a href="chat.html" class="chatbox-link"></a>
-      <a href="giao_dien.html">HOME</a>
-      <a href="gio_hang.html">🛒</a>
-    </header>
 
-    <main class="cart">
-      <h1 class="cart-title">GIỎ HÀNG</h1>
-
-  
-      <table class="cart-table">
-        <thead>
-          <tr>
-            <th>Tên Sản Phẩm</th>
-            <th>Số lượng</th>
-            <th>Giá</th>
-            
-          </tr>
-        </thead>
-          </tr>
-        </tbody>
-      </table>
-
-      
-      <div class="cart-summary">
-        <p class="cart-total">Tổng tiền:....</p>
-        <a href="thanh_toan.html" class="cart-btn cart-btn-checkout">
-          Thanh toán.
-        </a>
+      <div class="chatbox-icon">
+        <span class="chatbox-icon-symbol">🗨️</span>
+        <span class="chatbox-badge">Chat Box</span>
       </div>
+    </div>
+
+    <!-- HEADER -->
+    <div class="header">
+      <a href="chat.html" class="chatbox-link"></a>
+      <a href="giao_dien.html">TRANG CHỦ</a>
+      <a href="vest.html">VEST</a>
+      <a href="quan.html">QUẦN</a>
+      <a href="ca_vat.html">CÀ VẠT</a>
+      <a href="ao_so_mi.html">ÁO SƠ MI</a>
+      <a href="dang_nhap.html">ĐĂNG NHẬP</a>
+      <a href="dang_ky.html">ĐĂNG KÝ</a>
+      <a href="gio_hang.html">🛒 Giỏ Hàng</a>
+      <a href="adimin.html">👤Cài Đặt</a>
+    </div>
+
+    <!-- GIỎ HÀNG -->
+    <main class="cart">
+      <h2 class="cart-title">Giỏ hàng</h2>
+
+      <!-- DANH SÁCH SẢN PHẨM -->
+      <section class="cart-list">
+        <!-- JS sẽ append .cart-item vào đây -->
+      </section>
+
+      <!-- TÓM TẮT ĐƠN HÀNG -->
+      <aside class="cart-summary">
+        <h3>Chi tiết đơn hàng</h3>
+
+        <div class="summary-row">
+          <span>Tạm tính</span>
+          <span class="subtotal"></span>
+        </div>
+
+        <div class="summary-row">
+          <span>Giảm giá</span>
+          <span class="discount"></span>
+        </div>
+
+        <hr />
+
+        <div class="summary-row total">
+          <span>Tổng cộng</span>
+          <span class="total-price"></span>
+        </div>
+
+        <a href="thanh_toan.html" class="checkout-btn"> Thanh toán </a>
+        <a href="giao_dien.html" class="checkout-btn"> Tiếp tục mua hàng </a>
+      </aside>
     </main>
   </body>
 </html>
