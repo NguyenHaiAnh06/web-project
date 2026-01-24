@@ -1,93 +1,72 @@
 <!doctype html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Đăng ký</title>
-    <link rel="stylesheet" href="./css/dang_nhap.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- DÙNG CHUNG CSS VỚI ĐĂNG NHẬP -->
-    <link rel="stylesheet" href="./css/dang_nhap.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <title>Đăng ký</title>
+  <link rel="stylesheet" href="./css/dang_nhap.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <body>
-    <!-- CHAT BOX ICON -->
-    <div class="chatbox">
-      <a href="chat_box.html" class="chatbox-link">
-        <span class="chatbox-icon">
-          <span class="chatbox-icon-symbol">🗨️</span>
-          <span class="chatbox-badge">Chat Box</span>
-        </span>
-      </a>
+  <!-- DÙNG CHUNG CSS VỚI ĐĂNG NHẬP -->
+  <link rel="stylesheet" href="./css/dang_nhap.css" />
+</head>
+
+<body>
+  <!-- CHAT BOX ICON -->
+  <div class="chatbox">
+    <a href="chat_box.html" class="chatbox-link">
+      <span class="chatbox-icon">
+        <span class="chatbox-icon-symbol">🗨️</span>
+        <span class="chatbox-badge">Chat Box</span>
+      </span>
+    </a>
+  </div>
+
+  <!-- HEADER -->
+  <div class="header">
+    <a href="chat.html" class="chatbox-link"></a>
+    <a href="giao_dien.html">TRANG CHỦ</a>
+    <a href="vest.html">VEST</a>
+    <a href="quan.html">QUẦN</a>
+    <a href="ca_vat.html">CÀ VẠT</a>
+    <a href="ao_so_mi.html">ÁO SƠ MI</a>
+    <a href="dang_nhap.html">ĐĂNG NHẬP</a>
+    <a href="dang_ky.html">ĐĂNG KÝ</a>
+    <a href="gio_hang.html">🛒 Giỏ Hàng</a>
+    <a href="adimin.html">👤Cài Đặt</a>
+  </div>
+  <!-- AUTH CONTAINER -->
+  <div class="auth-container">
+    <div class="auth-box">
+      <form class="auth-form" id="registerForm">
+        <h2>ĐĂNG KÝ</h2>
+
+        <div class="form-group">
+          <input type="email" id="regEmail" name="email" placeholder="Email" required />
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="regUser" name="username" placeholder="Tên đăng nhập" required />
+        </div>
+
+        <div class="form-group">
+          <input type="password" id="regPass" name="password" placeholder="Mật khẩu" required />
+        </div>
+
+        <div class="form-group">
+          <input type="password" id="regConfirmPass" name="confirm_password" placeholder="Nhập lại mật khẩu" required />
+        </div>
+
+        <button type="submit" class="btn">Đăng ký</button>
+
+        <p class="link-switch">
+          Đã có tài khoản?
+          <a href="dang_nhap.html">Đăng nhập</a>
+        </p>
+      </form>
     </div>
+  </div>
+  <script src="./js/auth.js"></script>
+</body>
 
-    <!-- HEADER -->
-    <div class="header">
-      <a href="chat.html" class="chatbox-link"></a>
-      <a href="giao_dien.html">TRANG CHỦ</a>
-      <a href="vest.html">VEST</a>
-      <a href="quan.html">QUẦN</a>
-      <a href="ca_vat.html">CÀ VẠT</a>
-      <a href="ao_so_mi.html">ÁO SƠ MI</a>
-      <a href="dang_nhap.html">ĐĂNG NHẬP</a>
-      <a href="dang_ky.html">ĐĂNG KÝ</a>
-      <a href="gio_hang.html">🛒 Giỏ Hàng</a>
-      <a href="adimin.html">👤Cài Đặt</a>
-    </div>
-    <!-- AUTH CONTAINER -->
-    <div class="auth-container">
-      <div class="auth-box">
-        <form class="auth-form" method="post">
-          <h2>ĐĂNG KÝ</h2>
-
-          <div class="form-group">
-            <input
-              type="text"
-              name="fullname"
-              placeholder="Họ và tên"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <input type="email" name="email" placeholder="Email" required />
-          </div>
-
-          <div class="form-group">
-            <input
-              type="text"
-              name="username"
-              placeholder="Tên đăng nhập"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <input
-              type="password"
-              name="password"
-              placeholder="Mật khẩu"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <input
-              type="password"
-              name="confirm_password"
-              placeholder="Nhập lại mật khẩu"
-              required
-            />
-          </div>
-
-          <button type="submit" class="btn">Đăng ký</button>
-
-          <p class="link-switch">
-            Đã có tài khoản?
-            <a href="dang_nhap.html">Đăng nhập</a>
-          </p>
-        </form>
-      </div>
-    </div>
-  </body>
 </html>
