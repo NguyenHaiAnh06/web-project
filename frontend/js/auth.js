@@ -1,5 +1,5 @@
 const API_URL = "http://localhost:5000/api/auth";
-
+// ĐK
 document.addEventListener('DOMContentLoaded', () => {
     const regForm = document.getElementById('registerForm');
     if (regForm) {
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const response = await fetch(`${API_URL}/register`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email, username, password }) // Không gửi fullname
+                    body: JSON.stringify({ email, username, password })
                 });
 
                 const data = await response.json();
