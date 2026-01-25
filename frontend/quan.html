@@ -1,190 +1,188 @@
 <!doctype html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/so_mi.css" />
-    <title>SHOP QUÝ Ông</title>
-  </head>
 
-  <body>
-    <!-- CHAT BOX ICON -->
-    <div class="chatbox">
-      <a href="chat_box.html" class="chatbox-link">
-        <span class="chatbox-icon">
-          <span class="chatbox-icon-symbol">🗨️</span>
-          <span class="chatbox-badge">Chat Box</span>
-        </span>
-      </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/so_mi.css" />
+  <title>SHOP QUÝ Ông</title>
+</head>
+
+<body>
+  <!-- CHAT BOX ICON -->
+  <div class="chatbox">
+    <a href="chat_box.html" class="chatbox-link">
+      <span class="chatbox-icon">
+        <span class="chatbox-icon-symbol">🗨️</span>
+        <span class="chatbox-badge">Chat Box</span>
+      </span>
+    </a>
+  </div>
+
+  <!-- HEADER -->
+  <div class="header">
+    <a href="chat.html" class="chatbox-link"></a>
+    <a href="giao_dien.html">TRANG CHỦ</a>
+    <a href="vest.html">VEST</a>
+    <a href="quan.html">QUẦN</a>
+    <a href="ca_vat.html">CÀ VẠT</a>
+    <a href="ao_so_mi.html">ÁO SƠ MI</a>
+    <a href="dang_nhap.html">ĐĂNG NHẬP</a>
+    <a href="dang_ky.html">ĐĂNG KÝ</a>
+    <a href="gio_hang.html">🛒 Giỏ Hàng</a>
+    <a href="adimin.html">👤Cài Đặt</a>
+  </div>
+  <!-- PRODUCT 1 -->
+  <div class="product-list">
+    <div class="product">
+      <h4 style="text-transform: uppercase; color: #d4af37">
+        QUẦN TÂY MÀU BE
+      </h4>
+      <img
+        src="data:image/jpeg;base64,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" />
+      <ul>
+        <li style="color: #403c3c">Aukai phong cách Tây Âu</li>
+        <li style="color: #403c3c">kiểu dáng trẻ trung và năng động</li>
+        <li style="color: #403c3c">
+          ống rộng suông, vải hàn vinteck co giãn
+        </li>
+      </ul>
+      <div class="product-actions">
+        <div class="product-price">
+          <b><i>Giá 300.000 VND.</i></b>
+          <button class="btn-buy" data-name="QUẦN TÂY MÀU BE" data-price="300000">Mua ngay</button>
+          <button class="btn-buy" data-name="QUẦN TÂY MÀU BE" data-price="300000">Thêm giỏ hàng</button>
+        </div>
+      </div>
+    </div>
+    <!-- PRODUCT 2 -->
+    <div class="product">
+      <h4 style="text-transform: uppercase; color: #d4af37">
+        QUẦN ÂU NAM ĐEN.
+      </h4>
+      <img
+        src="data:image/jpeg;base64,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" />
+      <ul>
+        <li style="color: #403c3c">Quần Tây nam Baggy</li>
+        <li style="color: #403c3c">
+          lưng thun phía sau tạo cảm giác thoải mái
+        </li>
+        <li style="color: #403c3c">kiểu dáng trẻ trung và năng động</li>
+      </ul>
+      <div class="product-actions">
+        <div class="product-price">
+          <b><i>Giá 450.000 VND</i></b>
+          <button class="btn-buy" data-name="QUẦN ÂU NAM ĐEN" data-price="450000">Mua ngay</button>
+          <button class="btn-buy" data-name="QUẦN ÂU NAM ĐEN" data-price="450000">Thêm giỏ hàng</button>
+        </div>
+      </div>
+    </div>
+    <!-- PRODUCT 3 -->
+    <div class="product">
+      <h4 style="text-transform: uppercase; color: #d4af37">
+        Quần Tây Baggy Nam
+      </h4>
+      <img src="https://product.hstatic.net/1000096703/product/1_989034b492f4451aa4d6cfc89c699fec_grande.jpg" />
+      <ul>
+        <li style="color: #403c3c">Aukai phong cách Tây Âu</li>
+        <li style="color: #403c3c">kiểu dáng trẻ trung và năng động</li>
+        <li style="color: #403c3c">
+          ống rộng suông, vải hàn vinteck co giãn
+        </li>
+      </ul>
+      <div class="product-actions">
+        <div class="product-price">
+          <b><i>Giá 600.000 VND</i></b>
+          <button class="btn-buy" data-name="QUẦN TÂY BAGGY NAM" data-price="600000">Mua ngay</button>
+          <button class="btn-buy" data-name="QUẦN TÂY BAGGY NAM" data-price="600000">Thêm giỏ hàng</button>
+        </div>
+      </div>
     </div>
 
-    <!-- HEADER -->
-    <div class="header">
-      <a href="chat.html" class="chatbox-link"></a>
-      <a href="giao_dien.html">TRANG CHỦ</a>
-      <a href="vest.html">VEST</a>
-      <a href="quan.html">QUẦN</a>
-      <a href="ca_vat.html">CÀ VẠT</a>
-      <a href="ao_so_mi.html">ÁO SƠ MI</a>
-      <a href="dang_nhap.html">ĐĂNG NHẬP</a>
-      <a href="dang_ky.html">ĐĂNG KÝ</a>
-      <a href="gio_hang.html">🛒 Giỏ Hàng</a>
-      <a href="adimin.html">👤Cài Đặt</a>
-    </div>
-    <!-- PRODUCT 1 -->
-    <div class="product-list">
-      <div class="product">
-        <h4 style="text-transform: uppercase; color: #d4af37">
-          QUẦN TÂY MÀU BE
-        </h4>
-        <img
-          src="data:image/jpeg;base64,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"
-        />
-        <ul>
-          <li style="color: #403c3c">Aukai phong cách Tây Âu</li>
-          <li style="color: #403c3c">kiểu dáng trẻ trung và năng động</li>
-          <li style="color: #403c3c">
-            ống rộng suông, vải hàn vinteck co giãn
-          </li>
-        </ul>
-        <div class="product-actions">
-          <div class="product-price">
-            <b><i>Giá 300.000 VND.</i></b>
-            <button class="btn-buy">Mua ngay</button>
-            <button class="btn-buy">Thêm giỏ hàng.</button>
-          </div>
-        </div>
-      </div>
-      <!-- PRODUCT 2 -->
-      <div class="product">
-        <h4 style="text-transform: uppercase; color: #d4af37">
-          QUẦN ÂU NAM ĐEN.
-        </h4>
-        <img
-          src="data:image/jpeg;base64,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"
-        />
-        <ul>
-          <li style="color: #403c3c">Quần Tây nam Baggy</li>
-          <li style="color: #403c3c">
-            lưng thun phía sau tạo cảm giác thoải mái
-          </li>
-          <li style="color: #403c3c">kiểu dáng trẻ trung và năng động</li>
-        </ul>
-        <div class="product-actions">
-          <div class="product-price">
-            <b><i>Giá 450.000 VND</i></b>
-            <button class="btn-buy">Mua ngay</button>
-            <button class="btn-buy">Thêm giỏ hàng.</button>
-          </div>
-        </div>
-      </div>
-      <!-- PRODUCT 3 -->
-      <div class="product">
-        <h4 style="text-transform: uppercase; color: #d4af37">
-          Quần Tây Baggy Nam
-        </h4>
-        <img
-          src="https://product.hstatic.net/1000096703/product/1_989034b492f4451aa4d6cfc89c699fec_grande.jpg"
-        />
-        <ul>
-          <li style="color: #403c3c">Aukai phong cách Tây Âu</li>
-          <li style="color: #403c3c">kiểu dáng trẻ trung và năng động</li>
-          <li style="color: #403c3c">
-            ống rộng suông, vải hàn vinteck co giãn
-          </li>
-        </ul>
-        <div class="product-actions">
-          <div class="product-price">
-            <b><i>Giá 600.000 VND</i></b>
-            <button class="btn-buy">Mua ngay</button>
-            <button class="btn-buy">Thêm giỏ hàng.</button>
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <h4 style="text-transform: uppercase; color: #d4af37">
-          Quần âu nam polyester
-        </h4>
-        <img
-          src="data:image/jpeg;base64,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"
-        />
-        <ul>
-          <li style="color: #403c3c">Thành phần: 100%Polyester</li>
-          <li style="color: #403c3c">Sử dụng các sợi polyester siêu mảnh</li>
-          <li style="color: #403c3c">
-            Những sợi siêu nhỏ này được xoắn chặt lại thành một sợi lớn
-          </li>
-        </ul>
-        <div class="product-actions">
-          <div class="product-price">
-            <b><i>Giá 550.000 VND.</i></b>
-            <button class="btn-buy">Mua ngay</button>
-            <button class="btn-buy">Thêm giỏ hàng.</button>
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <h4 style="text-transform: uppercase; color: #d4af37">QUẦN ÂU TRẮNG</h4>
-        <img
-          src=" data:image/jpeg;base64,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"
-        />
-        <ul>
-          <li style="color: #403c3c">
-            Quần âu mềm mại, co giãn và thấm hút tốt
-          </li>
-          <li style="color: #403c3c">Nhanh khô và bền chắc</li>
-          <li style="color: #403c3c">vải hàn vinteck co giãn</li>
-        </ul>
-        <div class="product-actions">
-          <div class="product-price">
-            <b><i>Giá 700.000 VND</i></b>
-            <button class="btn-buy">Mua ngay</button>
-            <button class="btn-buy">Thêm giỏ hàng.</button>
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <h4 style="text-transform: uppercase; color: #d4af37">
-          QUẦN ÂU NAM MÀU TRẮNG XÁM.
-        </h4>
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS339PPdvBL6R9vK21-kpHvy0Z28yLKWAcU8w&s"
-        />
-        <ul>
-          <li style="color: #403c3c">Thành phần: 100%Polyester</li>
-          <li style="color: #403c3c">vải hàn vinteck co giãn</li>
-          <li style="color: #403c3c">Những sợi siêu nhỏ này được xoắn chặt</li>
-        </ul>
-        <div class="product-actions">
-          <div class="product-price">
-            <b><i>Giá 500.000 VND.</i></b>
-            <button class="btn-buy">Mua ngay</button>
-            <button class="btn-buy">Thêm giỏ hàng.</button>
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <h4 style="text-transform: uppercase; color: #d4af37">
-          QUẦN ÂU MÀU HỒNG.
-        </h4>
-        <img
-          src="data:image/jpeg;base64,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"
-        />
-        <ul>
-          <li style="color: #403c3c">Thành phần: 100%Polyester</li>
-          <li style="color: #403c3c">Sử dụng các sợi polyester siêu mảnh</li>
-          <li style="color: #403c3c">
-            Những sợi siêu nhỏ này được xoắn chặt lại thành một sợi lớn
-          </li>
-        </ul>
-        <div class="product-actions">
-          <div class="product-price">
-            <b><i>Giá 360.000 VND.</i></b>
-            <button class="btn-buy">Mua ngay</button>
-            <button class="btn-buy">Thêm giỏ hàng.</button>
-          </div>
+    <div class="product">
+      <h4 style="text-transform: uppercase; color: #d4af37">
+        Quần âu nam polyester
+      </h4>
+      <img
+        src="data:image/jpeg;base64,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" />
+      <ul>
+        <li style="color: #403c3c">Thành phần: 100%Polyester</li>
+        <li style="color: #403c3c">Sử dụng các sợi polyester siêu mảnh</li>
+        <li style="color: #403c3c">
+          Những sợi siêu nhỏ này được xoắn chặt lại thành một sợi lớn
+        </li>
+      </ul>
+      <div class="product-actions">
+        <div class="product-price">
+          <b><i>Giá 550.000 VND.</i></b>
+          <button class="btn-buy" data-name="QUẦN ÂU NAM POLYESTER" data-price="550000">Mua ngay</button>
+          <button class="btn-buy" data-name="QUẦN ÂU NAM POLYESTER" data-price="550000">Thêm giỏ hàng</button>
         </div>
       </div>
     </div>
-  </body>
+
+    <div class="product">
+      <h4 style="text-transform: uppercase; color: #d4af37">QUẦN ÂU TRẮNG</h4>
+      <img
+        src=" data:image/jpeg;base64,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" />
+      <ul>
+        <li style="color: #403c3c">
+          Quần âu mềm mại, co giãn và thấm hút tốt
+        </li>
+        <li style="color: #403c3c">Nhanh khô và bền chắc</li>
+        <li style="color: #403c3c">vải hàn vinteck co giãn</li>
+      </ul>
+      <div class="product-actions">
+        <div class="product-price">
+          <b><i>Giá 700.000 VND</i></b>
+          <button class="btn-buy" data-name="QUẦN ÂU TRẮNG" data-price="700000">Mua ngay</button>
+          <button class="btn-buy" data-name="QUẦN ÂU TRẮNG" data-price="700000">Thêm giỏ hàng</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product">
+      <h4 style="text-transform: uppercase; color: #d4af37">
+        QUẦN ÂU NAM MÀU TRẮNG XÁM.
+      </h4>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS339PPdvBL6R9vK21-kpHvy0Z28yLKWAcU8w&s" />
+      <ul>
+        <li style="color: #403c3c">Thành phần: 100%Polyester</li>
+        <li style="color: #403c3c">vải hàn vinteck co giãn</li>
+        <li style="color: #403c3c">Những sợi siêu nhỏ này được xoắn chặt</li>
+      </ul>
+      <div class="product-actions">
+        <div class="product-price">
+          <b><i>Giá 500.000 VND.</i></b>
+          <button class="btn-buy" data-name="QUẦN ÂU NAM MÀU TRẮNG XÁM" data-price="500000">Mua ngay</button>
+          <button class="btn-buy" data-name="QUẦN ÂU NAM MÀU TRẮNG XÁM" data-price="500000">Thêm giỏ hàng</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product">
+      <h4 style="text-transform: uppercase; color: #d4af37">
+        QUẦN ÂU MÀU HỒNG.
+      </h4>
+      <img
+        src="data:image/jpeg;base64,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" />
+      <ul>
+        <li style="color: #403c3c">Thành phần: 100%Polyester</li>
+        <li style="color: #403c3c">Sử dụng các sợi polyester siêu mảnh</li>
+        <li style="color: #403c3c">
+          Những sợi siêu nhỏ này được xoắn chặt lại thành một sợi lớn
+        </li>
+      </ul>
+      <div class="product-actions">
+        <div class="product-price">
+          <b><i>Giá 360.000 VND.</i></b>
+          <button class="btn-buy" data-name="QUẦN ÂU MÀU HỒNG" data-price="360000">Mua ngay</button>
+          <button class="btn-buy" data-name="QUẦN ÂU MÀU HỒNG" data-price="360000">Thêm giỏ hàng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/cart.js"></script>
+</body>
+
 </html>
