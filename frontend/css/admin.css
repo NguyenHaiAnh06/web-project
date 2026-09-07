@@ -1,6 +1,6 @@
-/* =================================================
+/* 
    RESET CƠ BẢN
-================================================= */
+*/
 * {
   margin: 0;
   padding: 0;
@@ -8,9 +8,9 @@
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* =================================================
+/* 
    BACKGROUND TỔNG – DARK SOFT LUXURY (ADMIN)
-================================================= */
+ */
 body.admin-body {
   min-height: 100vh;
   background: radial-gradient(
@@ -22,9 +22,9 @@ body.admin-body {
   color: #e6e6e6;
 }
 
-/* =================================================
+/*
    HEADER ADMIN
-================================================= */
+ */
 .admin-header {
   position: sticky;
   top: 0;
@@ -64,17 +64,17 @@ body.admin-body {
     0 0 12px rgba(176, 141, 87, 0.25);
 }
 
-/* =================================================
+/* 
    LAYOUT CHÍNH
-================================================= */
+ */
 .admin-layout {
   display: flex;
   min-height: calc(100vh - 90px);
 }
 
-/* =================================================
+/* 
    SIDEBAR ADMIN
-================================================= */
+ */
 .admin-sidebar {
   width: 260px;
   padding: 30px 20px;
@@ -135,9 +135,9 @@ body.admin-body {
     0 10px 25px rgba(0, 0, 0, 0.6);
 }
 
-/* =================================================
+/*
    NÚT ĐĂNG XUẤT
-================================================= */
+ */
 .admin-logout {
   display: block;
   margin-top: 40px;
@@ -165,9 +165,9 @@ body.admin-body {
   transform: translateY(-3px);
 }
 
-/* =================================================
+/* 
    CONTENT ADMIN
-================================================= */
+*/
 .admin-content {
   flex: 1;
   padding: 50px 60px;
@@ -211,9 +211,9 @@ body.admin-body {
   color: #cfcfcf;
 }
 
-/* =================================================
-   CHAT BOX – FLOATING LUXURY
-================================================= */
+/* 
+   CHAT BOX
+*/
 .chatbox {
   position: fixed;
   bottom: 30px;
